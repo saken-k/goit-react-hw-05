@@ -1,16 +1,21 @@
-import { useParams, useLocation, Link, Outlet } from "react-router-dom";
+import {
+  useParams,
+  useLocation,
+  Link,
+  Outlet,
+  NavLink,
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchMovieById } from "../../api";
 import css from "./MovieDetailsPage.module.css";
 import { MdStarRate } from "react-icons/md";
 import toast from "react-hot-toast";
+import clsx from "clsx";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const location = useLocation();
   const [movie, setMovie] = useState(null);
-  // const [searchParams, setSearchParams] = useSearchParams();
-  //   const [searchLocation, setSearchLocation] = useState(null);
 
   useEffect(() => {
     const getMovie = async () => {
@@ -31,6 +36,10 @@ const MovieDetailsPage = () => {
     location.state?.from?.pathname === "/"
       ? "← Back to Home"
       : "← Back to Search Results";
+
+  const buildLinkClass = ({ isActive }) => {
+    return clsx(css.link, isActive && css.active);
+  };
 
   const production = movie?.production_companies?.map((item) => (
     <li key={item.id}>{item.name}</li>
@@ -89,16 +98,24 @@ const MovieDetailsPage = () => {
       </div>
       <div className={css.additionalInfo}>
         <h3>Additional Information:</h3>
-        <ul>
+        <ul className={css.list}>
           <li>
-            <Link to="cast" state={{ from: backLinkHref }}>
+            <NavLink
+              to="cast"
+              state={{ from: backLinkHref }}
+              className={buildLinkClass}
+            >
               Cast
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="reviews" state={{ from: backLinkHref }}>
+            <NavLink
+              to="reviews"
+              state={{ from: backLinkHref }}
+              className={buildLinkClass}
+            >
               Reviews
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
