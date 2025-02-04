@@ -1,0 +1,28 @@
+.reviewList {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 12px 0;
+  gap: 12px;
+  /* margin-top: 8px; */
+}
+
+.noData {
+  color: orangered;
+  margin-top: 8px;
+}
+
+.reviewItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.name {
+  font-weight: bold;
+}

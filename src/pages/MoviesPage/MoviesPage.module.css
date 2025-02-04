@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 350px;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  outline: none;
+  font-size: 16px;
+}
+
+.button {
+  background-color: orangered;
+}

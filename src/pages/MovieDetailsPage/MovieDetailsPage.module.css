@@ -1,0 +1,31 @@
+.title {
+  text-align: start;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 12px 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}

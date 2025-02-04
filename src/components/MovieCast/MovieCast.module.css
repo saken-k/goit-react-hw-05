@@ -1,0 +1,38 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px 0;
+  gap: 12px;
+  /* margin-top: 8px; */
+}
+
+.noData {
+  margin-top: 8px;
+  color: orangered;
+}
+
+.castItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  height: 372px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.photo {
+  width: 200px;
+}
+
+.info {
+  padding: 8px;
+  max-height: 88px;
+}
